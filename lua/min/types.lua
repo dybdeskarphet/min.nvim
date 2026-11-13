@@ -1,11 +1,12 @@
 --- @meta
 
+--- @alias ColorschemeFlavor "gruvbox" | "monokai" | "kanagawa"
 --- @alias GruvboxContrast "low" | "high"
 --- @alias GruvboxTheme "dark" | "light"
 --- @alias GruvboxAccent "red" | "orange" | "yellow" | "green" | "cyan" | "blue" | "magenta"
 --- @alias HighlightTable table<string, vim.api.keyset.highlight>
 
---- @class GruvboxPalette
+--- @class FlavorBaseRamp
 --- @field base_00 string
 --- @field base_01 string
 --- @field base_02 string
@@ -22,6 +23,8 @@
 --- @field base_13 string
 --- @field base_14 string
 --- @field base_15 string
+
+--- @class FlavorAccents
 --- @field red string
 --- @field orange string
 --- @field yellow string
@@ -37,6 +40,12 @@
 --- @field bg_blue string
 --- @field bg_magenta string
 
+--- @class FlavorSpec
+--- @field base FlavorBaseRamp | table<GruvboxTheme, FlavorBaseRamp>
+--- @field accents table<GruvboxTheme, FlavorAccents | table<GruvboxContrast | "default", FlavorAccents>>
+
+--- @class GruvboxPalette : FlavorBaseRamp, FlavorAccents
+
 --- @class MarkdownDocstring
 --- @field python? boolean
 
@@ -44,6 +53,7 @@
 --- @field todotxt? boolean
 
 --- @class GruvboxConfig
+--- @field flavor? ColorschemeFlavor
 --- @field transparent? boolean
 --- @field italic_comments? boolean
 --- @field italic_functions? boolean

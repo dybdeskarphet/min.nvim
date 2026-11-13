@@ -5,4 +5,4 @@ end
 
 vim.g.colors_name = "gruvbox-minimal"
 
-require("gruvbox-minimal").load()
+require("min").load()

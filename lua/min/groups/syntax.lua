@@ -59,8 +59,10 @@ function M.setup(c, config)
 		["@string.todotxt"] = { fg = c.cyan },
 		["@comment.todotxt"] = { fg = c.base_10 },
 		["@keyword.todotxt"] = { fg = c.base_15, bold = true },
-		["@gruvbox_minimal.todotxt.pri_high"] = { fg = c.base_15, bold = true },
-		["@gruvbox_minimal.todotxt.pri_low"] = { fg = c.base_15, bold = false, nocombine = true },
+		["@min.todotxt.pri_high"] = { fg = c.base_15, bold = true },
+		["@min.todotxt.pri_low"] = { fg = c.base_15, bold = false, nocombine = true },
+		["@gruvbox_minimal.todotxt.pri_high"] = { link = "@min.todotxt.pri_high" },
+		["@gruvbox_minimal.todotxt.pri_low"] = { link = "@min.todotxt.pri_low" },
 
 		-- SQL
 		["@string.sql"] = { link = "String" },
@@ -73,16 +75,27 @@ function M.setup(c, config)
 		["@punctuation.sql"] = { link = "Operator" },
 		["@keyword.conditional.sql"] = { italic = true },
 
-		-- "GruvboxMinimal.." colors in case user wants to use them or I want to add a query
-		GruvboxMinimalRed = { fg = c.red },
-		GruvboxMinimalOrange = { fg = c.orange },
-		GruvboxMinimalYellow = { fg = c.yellow },
-		GruvboxMinimalGreen = { fg = c.green },
-		GruvboxMinimalCyan = { fg = c.cyan },
-		GruvboxMinimalBlue = { fg = c.blue },
-		GruvboxMinimalMagenta = { fg = c.magenta },
-		GruvboxMinimalAccent = { fg = c[config.accent] },
-		GruvboxMinimalBadge = { fg = c[config.accent], bg = c["bg_" .. config.accent], bold = true },
+		-- "Min.." colors in case user wants to use them or I want to add a query
+		MinRed = { fg = c.red },
+		MinOrange = { fg = c.orange },
+		MinYellow = { fg = c.yellow },
+		MinGreen = { fg = c.green },
+		MinCyan = { fg = c.cyan },
+		MinBlue = { fg = c.blue },
+		MinMagenta = { fg = c.magenta },
+		MinAccent = { fg = c[config.accent] },
+		MinBadge = { fg = c[config.accent], bg = c["bg_" .. config.accent], bold = true },
+
+		-- Backwards-compatible "GruvboxMinimal.." aliases
+		GruvboxMinimalRed = { link = "MinRed" },
+		GruvboxMinimalOrange = { link = "MinOrange" },
+		GruvboxMinimalYellow = { link = "MinYellow" },
+		GruvboxMinimalGreen = { link = "MinGreen" },
+		GruvboxMinimalCyan = { link = "MinCyan" },
+		GruvboxMinimalBlue = { link = "MinBlue" },
+		GruvboxMinimalMagenta = { link = "MinMagenta" },
+		GruvboxMinimalAccent = { link = "MinAccent" },
+		GruvboxMinimalBadge = { link = "MinBadge" },
 	}
 end
 

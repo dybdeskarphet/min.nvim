@@ -1,14 +1,6 @@
-local M = {}
-
---- Generate the palette based on contrast and theme
---- @param contrast GruvboxContrast
---- @param theme GruvboxTheme
---- @return GruvboxPalette
-function M.get_palette(contrast, theme)
-	theme = (theme == "dark") and "dark" or "light"
-	contrast = (contrast == "low") and "low" or "high"
-	local base_colors = {
-		-- FG and BG colors
+--- @type FlavorSpec
+return {
+	base = {
 		base_00 = "#11110f",
 		base_01 = "#221f1d",
 		base_02 = "#2d2c2b",
@@ -25,13 +17,10 @@ function M.get_palette(contrast, theme)
 		base_13 = "#f2e5bc",
 		base_14 = "#fbf1c7",
 		base_15 = "#f9f5d7",
-	}
-
-	local result = {}
-
-	if theme == "dark" then
-		if contrast == "low" then
-			result = {
+	},
+	accents = {
+		dark = {
+			low = {
 				red = "#ea6962",
 				orange = "#e78a4e",
 				yellow = "#d8a657",
@@ -46,9 +35,8 @@ function M.get_palette(contrast, theme)
 				bg_cyan = "#31352c",
 				bg_blue = "#2f3431",
 				bg_magenta = "#3c2e2f",
-			}
-		else
-			result = {
+			},
+			high = {
 				red = "#f2594b",
 				orange = "#f28534",
 				yellow = "#e9b143",
@@ -63,11 +51,10 @@ function M.get_palette(contrast, theme)
 				bg_cyan = "#31362b",
 				bg_blue = "#303330",
 				bg_magenta = "#3c2e2f",
-			}
-		end
-	else
-		if contrast == "low" then
-			result = {
+			},
+		},
+		light = {
+			low = {
 				red = "#c14a4a",
 				orange = "#c35e0a",
 				yellow = "#b47109",
@@ -82,9 +69,8 @@ function M.get_palette(contrast, theme)
 				bg_cyan = "#e0dfb7",
 				bg_blue = "#dfddbb",
 				bg_magenta = "#ebdabc",
-			}
-		else
-			result = {
+			},
+			high = {
 				red = "#af2528",
 				orange = "#b94c07",
 				yellow = "#b4730e",
@@ -99,18 +85,7 @@ function M.get_palette(contrast, theme)
 				bg_cyan = "#e0dfb7",
 				bg_blue = "#dfddbb",
 				bg_magenta = "#ebdabc",
-			}
-		end
-	end
-
-	for i = 0, vim.tbl_count(base_colors) - 1 do
-		local key = string.format("base_%02d", i)
-		local target_index = (theme == "light") and (15 - i) or i
-		local target_key = string.format("base_%02d", target_index)
-		result[key] = base_colors[target_key]
-	end
-
-	return result
-end
-
-return M
+			},
+		},
+	},
+}
