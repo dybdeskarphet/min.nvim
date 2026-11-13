@@ -7,6 +7,7 @@
 - *(groups)* Add theme's own highlights as groups
 - *(groups)* Make only the A,B,C and D priorities bold in todo.txt files
 - Add inline markdown support to todotxt files
+- [**breaking**] Rename plugin to min with multi-flavor support (gruvbox, monokai, kanagawa)
 
 ### 🐛 Bug Fixes
 
@@ -21,6 +22,8 @@
 
 - Rename optional.lua as extend.lua
 - *(cliff)* Run git-cliff after releases
+- *(release)* Use github.repository for changelog link
+- Ignore local tests directory
 ## [4.5.0] - 2026-05-26
 
 ### 🚀 Features
