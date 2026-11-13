@@ -18,6 +18,6 @@ jobs:
       - name: Upload to GitHub Release
         uses: softprops/action-gh-release@v2
         with:
-          body: "Full list of changes is in the [CHANGELOG](https://github.com/dybdeskarphet/gruvbox-minimal.nvim/blob/main/CHANGELOG.md)."
+          body: "Full list of changes is in the [CHANGELOG](https://github.com/${{ github.repository }}/blob/main/CHANGELOG.md)."
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
