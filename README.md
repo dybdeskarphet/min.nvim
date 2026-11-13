@@ -1,9 +1,5 @@
 <p align="center">
-    <img width="100" src="./assets/min-logo.png"/></h1>
-</p>
-
-<p align="center">
-    <strong>min.nvim</strong>
+    <img width="200" src="./assets/min-logo.png"/></h1>
 </p>
 
 <p align="center">
@@ -24,7 +20,7 @@
 
 ## Flavors
 
-- `gruvbox` *(default)* — [Gruvbox Material](https://github.com/sainnhe/gruvbox-material)
+- `gruvbox` _(default)_ — [Gruvbox Material](https://github.com/sainnhe/gruvbox-material)
 - `monokai` — [Monokai Pro Spectrum](https://github.com/loctvl842/monokai-pro.nvim)
 - `kanagawa` — [Kanagawa](https://github.com/rebelot/kanagawa.nvim)
 
