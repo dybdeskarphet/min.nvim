@@ -1,13 +1,13 @@
 <p align="center">
-    <img width="100" src="./assets/logo.png"/></h1>
+    <img width="100" src="./assets/min-logo.png"/></h1>
 </p>
 
 <p align="center">
-    <strong>Gruvbox Minimal</strong>
+    <strong>min.nvim</strong>
 </p>
 
 <p align="center">
-    A <a href="https://github.com/sainnhe/gruvbox-material">Gruvbox Material</a> theme conceptually inspired by <a href="https://github.com/tonsky/sublime-scheme-alabaster">Alabaster</a>.
+    A minimal colorscheme with several flavors, conceptually inspired by <a href="https://github.com/tonsky/sublime-scheme-alabaster">Alabaster</a>.
 </p>
 
 ## Preview
@@ -22,13 +22,19 @@
 <img height="450" src="./assets/screenshot_03_light.png"/></h1>
 </details>
 
+## Flavors
+
+- `gruvbox` *(default)* — [Gruvbox Material](https://github.com/sainnhe/gruvbox-material)
+- `monokai` — [Monokai Pro Spectrum](https://github.com/loctvl842/monokai-pro.nvim)
+- `kanagawa` — [Kanagawa](https://github.com/rebelot/kanagawa.nvim)
+
 ## Installation
 
 <details><summary>vim.pack</summary>
 
 ```lua
-vim.pack.add("https://github.com/dybdeskarphet/gruvbox-minimal.nvim")
-vim.cmd.colorscheme("gruvbox-minimal")
+vim.pack.add("https://github.com/dybdeskarphet/min.nvim")
+vim.cmd.colorscheme("min")
 ```
 
 </details>
@@ -37,10 +43,10 @@ vim.cmd.colorscheme("gruvbox-minimal")
 
 ```lua
 {
-    "dybdeskarphet/gruvbox-minimal.nvim"
-    config = {
-        vim.cmd.colorscheme("gruvbox-minimal")
-    }
+    "dybdeskarphet/min.nvim",
+    config = function()
+        vim.cmd.colorscheme("min")
+    end,
 }
 ```
 
@@ -51,11 +57,11 @@ vim.cmd.colorscheme("gruvbox-minimal")
 ```lua
 -- Assuming that require("mini.deps").setup() call has been made
 MiniDeps.add({
-    source = "dybdeskarphet/gruvbox-minimal.nvim"
+    source = "dybdeskarphet/min.nvim"
 })
 MiniDeps.now(function()
     -- Add the relevant configuration options if you want to
-    vim.cmd.colorscheme("gruvbox-minimal")
+    vim.cmd.colorscheme("min")
 end)
 ```
 
@@ -66,7 +72,8 @@ end)
 The default configuration settings are as follows:
 
 ```lua
-require("gruvbox-minimal").setup({
+require("min").setup({
+	flavor = "gruvbox", -- Available values: "gruvbox", "monokai", "kanagawa"
 	transparent = false, -- Sets all the major background values to 'none'
 	italic_comments = false, -- Italic comments
 	italic_functions = true, -- Italic functions and methods
@@ -88,7 +95,7 @@ require("gruvbox-minimal").setup({
 })
 
 -- Activates the colorscheme
-vim.cmd.colorscheme('gruvbox-minimal')
+vim.cmd.colorscheme('min')
 ```
 
 ## Themed plugins
