@@ -1,5 +1,5 @@
 <p align="center">
-    <img width="200" src="./assets/min-logo.png"/></h1>
+    <img width="200" alt="min.nvim logo" src="./assets/min-logo.png"/>
 </p>
 
 <p align="center">
@@ -8,15 +8,11 @@
 
 ## Preview
 
-<img height="450" src="./assets/screenshot_01.png"/></h1>
-<img height="450" src="./assets/screenshot_01_light.png"/></h1>
-
-<details><summary>More previews</summary>
-<img height="450" src="./assets/screenshot_02.png"/></h1>
-<img height="450" src="./assets/screenshot_02_light.png"/></h1>
-<img height="450" src="./assets/screenshot_03.png"/></h1>
-<img height="450" src="./assets/screenshot_03_light.png"/></h1>
-</details>
+| Flavor                  |                                  Dark                                  |                                  Light                                   |
+| :---------------------- | :--------------------------------------------------------------------: | :----------------------------------------------------------------------: |
+| **Gruvbox** _(default)_ |  <img width="320" alt="Gruvbox Dark" src="./assets/gruvbox-dark.png">  |  <img width="320" alt="Gruvbox Light" src="./assets/gruvbox-light.png">  |
+| **Monokai**             |  <img width="320" alt="Monokai Dark" src="./assets/monokai-dark.png">  |  <img width="320" alt="Monokai Light" src="./assets/monokai-light.png">  |
+| **Kanagawa**            | <img width="320" alt="Kanagawa Dark" src="./assets/kanagawa-dark.png"> | <img width="320" alt="Kanagawa Light" src="./assets/kanagawa-light.png"> |
 
 ## Flavors
 
