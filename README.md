@@ -8,17 +8,52 @@
 
 ## Preview
 
-| Flavor                  |                                  Dark                                  |                                  Light                                   |
-| :---------------------- | :--------------------------------------------------------------------: | :----------------------------------------------------------------------: |
-| **Gruvbox** _(default)_ |  <img width="320" alt="Gruvbox Dark" src="./assets/gruvbox-dark.png">  |  <img width="320" alt="Gruvbox Light" src="./assets/gruvbox-light.png">  |
-| **Monokai**             |  <img width="320" alt="Monokai Dark" src="./assets/monokai-dark.png">  |  <img width="320" alt="Monokai Light" src="./assets/monokai-light.png">  |
-| **Kanagawa**            | <img width="320" alt="Kanagawa Dark" src="./assets/kanagawa-dark.png"> | <img width="320" alt="Kanagawa Light" src="./assets/kanagawa-light.png"> |
-
-## Flavors
-
-- `gruvbox` _(default)_ — [Gruvbox Material](https://github.com/sainnhe/gruvbox-material)
-- `monokai` — [Monokai Pro Spectrum](https://github.com/loctvl842/monokai-pro.nvim)
-- `kanagawa` — [Kanagawa](https://github.com/rebelot/kanagawa.nvim)
+<table>
+  <thead>
+    <tr>
+      <th>Flavor</th>
+      <th>Dark</th>
+      <th>Light</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>
+        <code>gruvbox</code> <em>(default)</em>
+        <ul>
+          <li>Based on <a href="https://github.com/sainnhe/gruvbox-material">gruvbox-material</a></li>
+          <li><code>material</code> palette</li>
+          <li>Warmer background</li>
+        </ul>
+      </td>
+      <td align="center"><img width="320" alt="Gruvbox Dark" src="./assets/gruvbox-dark.png"></td>
+      <td align="center"><img width="320" alt="Gruvbox Light" src="./assets/gruvbox-light.png"></td>
+    </tr>
+    <tr>
+      <td>
+        <code>monokai</code>
+        <ul>
+          <li>Based on <a href="https://github.com/loctvl842/monokai-pro.nvim">monokai-pro.nvim</a></li>
+          <li><code>Spectrum</code> variant</li>
+        </ul>
+      </td>
+      <td align="center"><img width="320" alt="Monokai Dark" src="./assets/monokai-dark.png"></td>
+      <td align="center"><img width="320" alt="Monokai Light" src="./assets/monokai-light.png"></td>
+    </tr>
+    <tr>
+      <td>
+        <code>kanagawa</code>
+        <ul>
+          <li>Based on <a href="https://github.com/rebelot/kanagawa.nvim">kanagawa.nvim</a></li>
+          <li><code>Dragon</code> background &amp; neutrals</li>
+          <li><code>Wave</code> foregrounds &amp; accents</li>
+        </ul>
+      </td>
+      <td align="center"><img width="320" alt="Kanagawa Dark" src="./assets/kanagawa-dark.png"></td>
+      <td align="center"><img width="320" alt="Kanagawa Light" src="./assets/kanagawa-light.png"></td>
+    </tr>
+  </tbody>
+</table>
 
 ## Installation
 
